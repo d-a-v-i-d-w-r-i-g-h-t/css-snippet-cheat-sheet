@@ -14,6 +14,12 @@ main{
     padding-top: 65px;
     display: flex;
 }
+
+.grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+}
 h1 {
     color: var(--colorscheme);
     font-size: 200%;
