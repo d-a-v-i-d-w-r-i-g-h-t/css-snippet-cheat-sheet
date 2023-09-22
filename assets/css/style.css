@@ -1,0 +1,37 @@
+:root {
+    --dark: grey;
+    --light: whitesmoke;
+    --colorscheme: rgb(168, 59, 178);
+
+} 
+
+body {
+    background-color: var(--dark);
+}
+
+h1 {
+    color: var(--colorscheme);
+    font-size: 200%;
+    text-align: center;
+    margin-top:35px;
+}
+
+h2 {
+    color: var(--colorscheme);
+    font-size: 150%;
+    text-align: left;
+} 
+
+h3 {
+    color: var(--colorscheme);
+    font-size: 125%;
+    text-align: center;
+    margin-top:35px;
+} 
+
+p {
+    color: var(--light);
+    text-align: center;
+    margin-top:25px;
+}
+
