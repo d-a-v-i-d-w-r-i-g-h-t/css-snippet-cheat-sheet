@@ -11,14 +11,17 @@ body {
 }
 
 main{
-    padding-top: 65px;
-    display: flex;
+    padding-top: 40px;
 }
 
-.grid {
+.grid-container {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: max-content;
+    grid-gap: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 h1 {
     color: var(--colorscheme);
@@ -44,11 +47,12 @@ header p {
     color: var(--light);
     text-align: center;
     margin-top:25px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 
 .card-header {
-    display: flex;
     position: relative;
     margin-top: -20px;
     top: 20px;
@@ -69,35 +73,40 @@ header p {
     margin-top: 25px;
 }
 
-/*.card {
-    position: relative;
-    border-style: dashed;
-    border-color: var(--light);
-}*/
 
 .card-content {
-    display:flex;
+    display: flex;
     flex-direction: column;
     position: relative;
     border-style: dashed;
     border-color: var(--light);
     padding: 10px;
-    margin-left: 12px;
-    margin-right: 12px;
+    height: 90%;
 }
 
-.code-box {
+.code-card {
     display: flex;
+    align-items: center;
     background-image: linear-gradient(
         rgba(232, 102, 236, 0.3) 0%,
         var(--colorscheme) 100%
     );
     border-radius: 5px;
-    margin-top: auto;
-    margin-bottom: auto;
     text-align: left;
     padding-left: 10px;
+    height: 100%;
+}
 
+.code-card .card-header {
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+.code-card:hover,
+.code-card:hover .card-header {
+    box-shadow: inset 0px 0px 8px
+  rgba(232, 102, 236, 1), 0 0 15px
+  rgba(232, 102, 236, 1);
 }
 
 .card-content p {
@@ -111,3 +120,21 @@ code {
     font-family:monospace;
 }
 
+@media screen and (max-width: 992px) {
+    .grid-container {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+
+  /* Large smartphones - navbar changes color - up to 768px */
+  @media screen and (max-width: 768px) {
+    .grid-container {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+  }
